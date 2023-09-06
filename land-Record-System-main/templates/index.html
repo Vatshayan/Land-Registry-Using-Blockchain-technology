@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Land Registery Using Blockchain</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      form {
+        margin: 0 auto;
+        width: 50%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type=text], input[type=number], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      input[type=submit]:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Land Registery Using Blockchain</h1>
+    <center><img src="https://miro.medium.com/v2/resize:fit:1200/1*mwpuwHSsNIlIirvWdjgIbw.jpeg">
+    </center>
+    <form method="POST" action="/add_record">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age"><br>
+      <label for="land">Land History:</label>
+      <textarea id="land" name="land"></textarea><br>
+      <label for="uid">UID:</label>
+      <input type="number" id="uid" name="uid"><br>
+      <input type="submit" value="Add Record">
+    </form>
+    <br><br>
+    <form method="GET" action="/get_history">
+      <label for="name">UID:</label>
+      <input type="text" id="uid" name="uid"><br>
+      <input type="submit" value="Get Record">
+    </form>
+    <br><br>
+    <form method="GET" action="/view_blockchain">
+      <input type="submit" value="View all Blockchain">
+    </form>
+  </body>
+</html>

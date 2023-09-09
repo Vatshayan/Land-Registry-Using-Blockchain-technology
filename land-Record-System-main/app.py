@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from hashlib import sha256
 from datetime import datetime
 import random
 
@@ -48,7 +47,7 @@ def add_record():
     return f'Record added to blockchain successfully. Your User ID - {uid}'
 
 # getting patient record from blockchain
-@app.route('/get_record', methods=['GET'])
+@app.route('/get_records', methods=['GET'])
 def get_record():
     uid = request.args.get('uid')
     for block in blockchain:
